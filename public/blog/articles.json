@@ -1,0 +1,13 @@
+{
+  "articles": [
+    {
+      "slug": "docker-compose-for-fast-integration-tests",
+      "title": "Faster Integration Tests with Docker Compose (Instead of Per-Module Testcontainers)",
+      "date": "2026-02-18",
+      "summary": "A pragmatic approach for multi-module Maven projects: run one shared Docker Compose stack for faster tests, safer parallelism, and reusable E2E environments.",
+      "readingMinutes": 7,
+      "markdownPath": "/blog/content/docker-compose-for-fast-integration-tests.md",
+      "sourcePath": "docker-compose-for-fast-integration-tests.md"
+    }
+  ]
+}

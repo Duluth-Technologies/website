@@ -1,0 +1,60 @@
+<div class="site-shell">
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" routerLink="/" aria-label="Duluth Technologies home">
+        <img class="brand-logo" src="/logo.png" alt="Duluth Technologies logo" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="/services" routerLinkActive="active">Services</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      </nav>
+      <a class="btn btn-primary" routerLink="/contact">Book a Discovery Call</a>
+    </div>
+  </header>
+
+  <main>
+    <router-outlet />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <div class="footer-company">
+          <img class="footer-company-logo" src="/logoD.png" alt="Duluth Technologies D logo" />
+          <div class="footer-company-details">
+            <h2>Duluth Technologies</h2>
+            <p>
+              A small senior software company delivering client products and building in-house software
+              with a production-first mindset.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Navigation</h2>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <p>Questions or project context?</p>
+        <p><a href="mailto:contact@duluthtechnologies.com">contact@duluthtechnologies.com</a></p>
+        <p><a href="https://www.linkedin.com/company/duluth-technologies/">LinkedIn</a></p>
+      </section>
+    </div>
+    <div class="container footer-meta">
+      <p>
+        By submitting forms, you agree to our <a href="/privacy">Privacy Policy</a>,
+        <a routerLink="/terms">Terms</a>, and <a routerLink="/mentions-legales">Mentions Legales</a>.
+      </p>
+    </div>
+  </footer>
+</div>

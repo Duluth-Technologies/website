@@ -1,0 +1,19 @@
+<section class="page">
+  <div class="container article-wrap">
+    @if (article$ | async; as article) {
+      <a class="back-link" routerLink="/blog">← Back to blog</a>
+      <p class="eyebrow">
+        <time [attr.datetime]="article.date">{{ article.date | date: 'MMMM d, y' }}</time>
+        <span aria-hidden="true">•</span>
+        <span>{{ article.readingMinutes }} min read</span>
+      </p>
+      <h1>{{ article.title }}</h1>
+      <p class="article-summary">{{ article.summary }}</p>
+      <article class="article-content" [innerHTML]="article.html"></article>
+    } @else {
+      <a class="back-link" routerLink="/blog">← Back to blog</a>
+      <h1>Article Not Found</h1>
+      <p>The article you requested does not exist.</p>
+    }
+  </div>
+</section>

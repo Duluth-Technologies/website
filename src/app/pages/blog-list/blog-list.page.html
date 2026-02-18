@@ -1,0 +1,38 @@
+<section class="page hero small">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>
+      Technical articles from real delivery work: architecture decisions, reliability practices,
+      operational trade-offs, and lessons from production.
+    </p>
+  </div>
+</section>
+
+<section class="page">
+  <div class="container">
+    <h2>Latest Articles</h2>
+
+    @if (articles$ | async; as articles) {
+      @if (articles.length > 0) {
+        <div class="blog-list">
+          @for (article of articles; track article.slug) {
+            <article class="card blog-card">
+              <p class="eyebrow">
+                <time [attr.datetime]="article.date">{{ article.date | date: 'MMMM d, y' }}</time>
+                <span aria-hidden="true">•</span>
+                <span>{{ article.readingMinutes }} min read</span>
+              </p>
+              <h3>
+                <a [routerLink]="['/blog', article.slug]">{{ article.title }}</a>
+              </h3>
+              <p>{{ article.summary }}</p>
+              <a [routerLink]="['/blog', article.slug]">Read article</a>
+            </article>
+          }
+        </div>
+      } @else {
+        <p>No articles published yet. Add markdown files to <code>content/articles</code>.</p>
+      }
+    }
+  </div>
+</section>

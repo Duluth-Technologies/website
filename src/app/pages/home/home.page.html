@@ -1,0 +1,270 @@
+<section class="page hero home-hero">
+  <div class="container">
+    <h1>Software built with full ownership, from first decision to long-term operation.</h1>
+    <p>
+      Duluth Technologies is a senior software team that helps organizations deliver and evolve digital
+      products. We lead client projects end-to-end and build our own products with the same
+      production standards.
+    </p>
+    <p>
+      We also work with startups that need seniority to start well, audit their current setup, or fix
+      delivery and reliability difficulties already slowing the business.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" routerLink="/contact">Book a Discovery Call</a>
+      <a class="btn btn-secondary" routerLink="/contact">Tell Us About Your Project</a>
+    </div>
+    <ul class="proof-points">
+      <li>Senior team, hands-on delivery.</li>
+      <li>Clear scope, clear decisions, clear accountability.</li>
+      <li>Built for real use, long-term reliability, and steady evolution.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page">
+  <div class="container">
+    <h2>What We Do</h2>
+    <div class="card-grid three">
+      <article class="card">
+        <h3>Client Services</h3>
+        <p>
+          We design, build, modernize, and operate custom software products for organizations that
+          need strong technical leadership and reliable execution.
+        </p>
+        <a routerLink="/services">Explore Services</a>
+      </article>
+      <article class="card">
+        <h3>Startup Advisory</h3>
+        <p>
+          We provide senior startup guidance to help founder-led teams start well, audit delivery
+          reality, and recover stalled initiatives.
+        </p>
+        <a routerLink="/services">Explore services</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page muted">
+  <div class="container">
+    <h2>For Startups</h2>
+    <p>
+      Founder-led teams often need senior technical judgment before they need a full internal senior
+      organization. We provide focused support in the moments where execution risk is highest.
+    </p>
+    <div class="card-grid three">
+      <article class="card">
+        <h3>Startup Kickoff</h3>
+        <p>Set a solid foundation for architecture, scope, delivery cadence, and technical priorities.</p>
+        <p><strong>Best when:</strong> you are moving from idea to first reliable product milestones.</p>
+      </article>
+      <article class="card">
+        <h3>Technical Audit</h3>
+        <p>Assess codebase, platform reliability, team workflow, and delivery bottlenecks.</p>
+        <p><strong>Best when:</strong> you need a clear diagnosis before scaling team or commitments.</p>
+      </article>
+      <article class="card">
+        <h3>Recovery Sprint</h3>
+        <p>Stabilize current issues, reset priorities, and regain a predictable delivery rhythm.</p>
+        <p><strong>Best when:</strong> deadlines, incidents, or quality problems are compounding.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page customers-section">
+  <div class="container">
+    <h2>Our Customers</h2>
+  </div>
+  <div class="customer-carousel-fullbleed">
+    <div class="customer-carousel" [class.has-arrows]="hasCustomerOverflow">
+      @if (hasCustomerOverflow) {
+        <button
+          class="customer-arrow"
+          type="button"
+          aria-label="Scroll customers left"
+          (click)="scrollCustomers('left')"
+        >
+          &#8592;
+        </button>
+      }
+      <div class="customer-grid" #customerGrid [class.has-overflow]="hasCustomerOverflow">
+        @for (customer of customers; track customer.name) {
+          <a
+            class="customer-card"
+            [href]="customer.websiteUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="'Visit ' + customer.name"
+          >
+            <img
+              [src]="customer.logoUrl"
+              [alt]="customer.name + ' logo'"
+              loading="lazy"
+              (load)="updateCustomerOverflow()"
+              (error)="updateCustomerOverflow()"
+            />
+            <span>{{ customer.name }}</span>
+          </a>
+        }
+      </div>
+      @if (hasCustomerOverflow) {
+        <button
+          class="customer-arrow"
+          type="button"
+          aria-label="Scroll customers right"
+          (click)="scrollCustomers('right')"
+        >
+          &#8594;
+        </button>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="page muted">
+  <div class="container">
+    <h2>How We Work</h2>
+    <ol class="step-list">
+      <li><strong>Discovery:</strong> We clarify goals, constraints, stakeholders, and risks.</li>
+      <li><strong>Product Framing:</strong> We define scope, priorities, and success criteria.</li>
+      <li>
+        <strong>Delivery Planning:</strong> We break work into practical milestones with visible
+        trade-offs.
+      </li>
+      <li>
+        <strong>Iterative Build:</strong> We deliver in short cycles, validate early, and adjust.
+      </li>
+      <li>
+        <strong>Production Readiness:</strong> We prepare monitoring and operational routines before
+        launch.
+      </li>
+      <li>
+        <strong>Long-Term Evolution:</strong> We improve performance, reliability, and product value
+        over time.
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="page">
+  <div class="container">
+    <h2>Why Us</h2>
+    <div class="chip-grid">
+      <p>End-to-end ownership</p>
+      <p>Senior judgment</p>
+      <p>Clarity in complexity</p>
+      <p>Reliable execution</p>
+      <p>Production mindset</p>
+      <p>Maintainable systems</p>
+      <p>Security awareness</p>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="container">
+    <h2>Use Cases</h2>
+    <div class="card-grid three use-case-grid">
+      <article class="card">
+        <h3>No CTO yet, but product pressure is high</h3>
+        <p>We provide senior technical leadership while your internal structure is still forming.</p>
+      </article>
+      <article class="card">
+        <h3>MVP shipped, now unstable and hard to scale</h3>
+        <p>We stabilize reliability first, then define a practical path to sustainable growth.</p>
+      </article>
+      <article class="card">
+        <h3>Roadmap slips every sprint</h3>
+        <p>We reset scope discipline, delivery flow, and decision cadence to recover momentum.</p>
+      </article>
+      <article class="card">
+        <h3>Need a technical audit before fundraising or scale</h3>
+        <p>We map risks, technical debt, and operational gaps with clear remediation priorities.</p>
+      </article>
+      <article class="card">
+        <h3>Team is busy but architecture decisions are blocked</h3>
+        <p>We unblock high-impact decisions and align engineering with product and business goals.</p>
+      </article>
+      <article class="card">
+        <h3>Need continuity after launch while the company grows</h3>
+        <p>We support operations and controlled evolution until your in-house capacity catches up.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page muted">
+  <div class="container">
+    <h2>Proof from Startup Engagements</h2>
+    <p>
+      Representative results from startup-focused work where speed had to improve without increasing
+      risk.
+    </p>
+    <div class="card-grid three">
+      <article class="card">
+        <h3>Release Cadence Recovery</h3>
+        <p><strong>Challenge:</strong> irregular launches and late fixes.</p>
+        <p><strong>Action:</strong> introduced a weekly release rhythm and quality gates.</p>
+        <p><strong>Result:</strong> moved from monthly releases to weekly production updates.</p>
+      </article>
+      <article class="card">
+        <h3>Reliability Stabilization</h3>
+        <p><strong>Challenge:</strong> recurring incidents after feature pushes.</p>
+        <p><strong>Action:</strong> implemented monitoring, incident routines, and rollback discipline.</p>
+        <p><strong>Result:</strong> reduced critical production incidents by more than 60%.</p>
+      </article>
+      <article class="card">
+        <h3>Delivery Lead-Time Improvement</h3>
+        <p><strong>Challenge:</strong> long path from decision to delivered feature.</p>
+        <p><strong>Action:</strong> clarified ownership, trimmed scope, and improved handoff flow.</p>
+        <p><strong>Result:</strong> reduced average lead time from around 3 weeks to under 1 week.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page muted">
+  <div class="container">
+    <h2>Latest from the Blog</h2>
+    <p>Technical articles on delivery, reliability, and product decision-making.</p>
+    @if (latestArticles$ | async; as latestArticles) {
+      @if (latestArticles.length > 0) {
+        <div class="card-grid three">
+          @for (article of latestArticles; track article.slug) {
+            <article class="card blog-card">
+              <p class="eyebrow">
+                <time [attr.datetime]="article.date">{{ article.date | date: 'MMMM d, y' }}</time>
+                <span aria-hidden="true">•</span>
+                <span>{{ article.readingMinutes }} min read</span>
+              </p>
+              <h3><a [routerLink]="['/blog', article.slug]">{{ article.title }}</a></h3>
+              <p>{{ article.summary }}</p>
+              <a [routerLink]="['/blog', article.slug]">Read article</a>
+            </article>
+          }
+        </div>
+      } @else {
+        <p>No blog articles yet. Add markdown files to <code>content/articles</code>.</p>
+      }
+    }
+    <div class="cta-row">
+      <a class="btn btn-secondary" routerLink="/blog">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+<section class="page cta-band">
+  <div class="container">
+    <h2>Need a team that can take full technical responsibility?</h2>
+    <p>
+      If you have a product idea to build, a platform to modernize, or delivery pressure to manage,
+      we can help you define a practical path and execute it with ownership.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" routerLink="/contact">Book a Discovery Call</a>
+      <a class="btn btn-secondary" routerLink="/contact">Discuss Your Challenges</a>
+    </div>
+  </div>
+</section>
