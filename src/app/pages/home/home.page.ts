@@ -16,6 +16,7 @@ type Customer = {
   name: string;
   logoUrl: string;
   websiteUrl: string;
+  largeLogo?: boolean;
 };
 
 @Component({
@@ -49,6 +50,12 @@ export class HomePageComponent implements AfterViewInit {
       name: 'Dream Energy',
       logoUrl: 'https://www.dream-energy.fr/wp-content/themes/t-dreamenergy/assets/images/homepage/logo-dream-energy.svg',
       websiteUrl: 'https://www.dream-energy.fr/',
+    },
+    {
+      name: 'SNCF',
+      logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/LOGO%20SNCF%20GROUPE%20CMJN.jpg',
+      websiteUrl: 'https://www.sncf.com/',
+      largeLogo: true,
     },
     {
       name: 'Toulouse Business School',

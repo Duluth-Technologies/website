@@ -98,13 +98,16 @@
             rel="noopener noreferrer"
             [attr.aria-label]="'Visit ' + customer.name"
           >
-            <img
-              [src]="customer.logoUrl"
-              [alt]="customer.name + ' logo'"
-              loading="lazy"
-              (load)="updateCustomerOverflow()"
-              (error)="updateCustomerOverflow()"
-            />
+            <div class="customer-card-logo">
+              <img
+                [src]="customer.logoUrl"
+                [alt]="customer.name + ' logo'"
+                [class.customer-logo-large]="customer.largeLogo"
+                loading="lazy"
+                (load)="updateCustomerOverflow()"
+                (error)="updateCustomerOverflow()"
+              />
+            </div>
             <span>{{ customer.name }}</span>
           </a>
         }
