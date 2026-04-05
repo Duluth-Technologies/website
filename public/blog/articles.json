@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "slug": "testing-against-a-real-gitlab-instance-with-docker-compose",
+      "title": "Testing Against a Real GitLab Instance with Docker Compose",
+      "date": "2026-04-05",
+      "summary": "A pragmatic, language-agnostic setup for running GitLab and a local runner in Docker Compose so integration tests stay realistic locally and reusable in CI.",
+      "readingMinutes": 9,
+      "markdownPath": "/blog/content/testing-against-a-real-gitlab-instance-with-docker-compose.md",
+      "sourcePath": "testing-against-a-real-gitlab-instance-with-docker-compose.md"
+    },
+    {
       "slug": "docker-compose-for-fast-integration-tests",
       "title": "Faster Integration Tests with Docker Compose (Instead of Per-Module Testcontainers)",
       "date": "2026-02-18",
