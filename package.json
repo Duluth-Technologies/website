@@ -5,6 +5,7 @@
     "prepare:blog": "node scripts/build-blog-index.mjs",
     "prestart": "npm run prepare:blog",
     "prebuild": "npm run prepare:blog",
+    "postbuild": "node scripts/prepare-github-pages.mjs",
     "prewatch": "npm run prepare:blog",
     "ng": "ng",
     "start": "ng serve",
